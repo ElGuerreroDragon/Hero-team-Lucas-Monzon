@@ -64,4 +64,36 @@ ul {
   color: white;
   border: 1px solid white;
   border-radius: 80px;
+  border-color: tan;;
+}
+
+.tablestadistics{
+  width: 100%;
+}
+.fila{
+  margin:200px;
+}
+
+.contact1{
+  height: 46.8vh;
+  color:black;
+}
+
+.contact2{
+  height: 47vh;
+  
+  background-color: tan;
+}
+
+.btnfake{
+  border: 1px solid black;
+  border-radius: 30px;
+  height: 35px;
+  width:max-content;
+  background-color: black;
+}
+
+.btnfake a{
+  text-decoration: none;
+  color:white;
 }
