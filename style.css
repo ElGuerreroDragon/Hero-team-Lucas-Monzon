@@ -81,7 +81,7 @@ ul {
 
 .contact2{
   height: 47vh;
-  
+  width:100.5%;
   background-color: tan;
 }
 
@@ -96,4 +96,29 @@ ul {
 .btnfake a{
   text-decoration: none;
   color:white;
+}
+
+.butonbu{
+  display: flex;
+  align-items: baseline;
+  height: max-content;
+}
+
+.myteam{
+  border:1px solid black;
+  height: 42.3vh;
+}
+
+
+.selectChamplist{
+  border:1px solid black;
+  overflow-x: scroll;
+  height: max-content;
+  margin:0;
+  padding:0;
+}
+
+.cartita{
+  height: 10px;
+  margin:20px;
 }

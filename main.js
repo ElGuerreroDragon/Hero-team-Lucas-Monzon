@@ -23,7 +23,7 @@ const personajes = {
 
             nombre = nombre.replace(" ","-")
             contentHTML += `
-            <div class="col-md-2 text-center">
+            <div class="col-md-2 text-center d-inline-block">
               <a onclick=datosChamp("${nombre}") target="_blank" class="nombrePerso">
                 <img src="${heroe.images.lg}" alt="${heroe.name}" class="img-thumbnail">
               </a>
