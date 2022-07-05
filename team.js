@@ -26,3 +26,16 @@ const personajes = {
 };
 
 personajes.render()
+
+
+const nombreEquipo = document.getElementById("nombreteam")
+const nombreacept = document.getElementById("aceptnameteam")
+const titulo = document.getElementById("tituloteam")
+let titulowhere= document.createElement("div")
+
+nombreacept.addEventListener("click", () =>{
+  titulowhere.innerHTML=`<h2 class="text-center">${nombreEquipo.value}</h2>`;
+  titulo.appendChild(titulowhere)
+  console.log(titulo)
+} )
+
