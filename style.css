@@ -1,3 +1,6 @@
+*{
+  font-family: 'Roboto Condensed', sans-serif;
+}
 .grids {
   margin: 0;
   padding: 0;
@@ -106,19 +109,41 @@ ul {
 
 .myteam{
   border:1px solid black;
-  height: 42.3vh;
+  height: 32vh;
 }
 
 
 .selectChamplist{
   border:1px solid black;
-  overflow-x: scroll;
-  height: max-content;
-  margin:0;
+  margin:10px;
   padding:0;
 }
 
 .cartita{
-  height: 10px;
+  height: 1%;
   margin:20px;
+}
+
+.btnTeam{
+  width: 96%;
+}
+
+.tituloteamheroes{
+  width: max-content;
+  margin:0;
+  padding: 0;
+}
+
+.tresheroes{
+  padding: 0;
+  margin-right: 20px;
+  height:35vh;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.card-title{
+  height:10%;
 }

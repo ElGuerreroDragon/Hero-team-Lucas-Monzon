@@ -13,13 +13,16 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet"> 
 
     <title>ARMA TU EQUIPO!</title>
   </head>
   <body>
     <ul class="nav justify-content-center bg-dark">
       <li class="nav-item">
-        <a class="nav" aria-current="page" href="index.html">HOME</a>
+        <a class="nav" aria-current="page" href="index.html">INICIO</a>
       </li>
       <li class="nav-item">
         <a class="nav" href="team.html">ARMA TU EQUIPO!</a>
@@ -36,17 +39,19 @@
       <div class="row m-0 p-0">
         <div class="col-6">
           <div class="row m-3"><input type="text" id="nombreteam" class="text-center" placeholder="Escriba aqui el nombre de su equipo"></div>
-          <button type="button" id="aceptnameteam" class="btn btn-success m-3">Enviar consulta</button>
+          <button type="button" id="aceptnameteam" class="btn btn-success m-3 btnTeam">Confirmar el nombre de equipo</button>
+          <br>
+          <p class="text-center m-3 fw-bold">En esta seccion puedes elegir el nombre de tu equipo, ademas de poder arrastrar hasta 3 personajes a la seccion correspondiente, donde puedes generar tu propio equipo de heroes! <br> No dejes pasar esta oportunidad, elige tu equipo de heroes y preparate para el combate!</p>
+          <h3 class="text-center m-3 fw-bold mt-3">ELEGI TUS 3 HEROES PARA CREAR TU EQUIPO</h3>
+          <select class="m-0 p-0 col-12 selectChamplist" id="selectChamplist">
+          </select>
         </div>
         <div class="col-6 myteam m-0 p-0">
-          
-        </div>
-        <div class="row selectChamp m-0 p-0">
-          <div class="m-0 p-0 col-12 d-flex  align-items-center selectChamplist" id="selectChamplist">
             <div id="tituloteam"></div>
-
+          </div>
           </div>
         </div>
+
     </div>
   </div>
 

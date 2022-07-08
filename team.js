@@ -9,16 +9,11 @@ const personajes = {
       .then((res) => res.json())
       .then((json) => {
         for (const heroe of json) {
-          let nombre = heroe.name;
             contentHTML += `
-            <div class="cartita col-md-2 m-0 p-0 card bg-dark text-white text-center">
-              <a onclick=datosChamp("${nombre}") target="_blank" class="nombrePerso">
-                <img src="${heroe.images.sm}" class="card-img" alt="${heroe.name}">
-              </a>
-              <div class="card-img-overlay">
+            <option class="text-center" id="champs" draggable="true">
               <h3 class="shadow-lg card-title">${heroe.name}</h3>
               </div>
-            </div>`;
+            </option>`;
         }
         container.innerHTML = contentHTML;
       }); 
@@ -31,11 +26,13 @@ personajes.render()
 const nombreEquipo = document.getElementById("nombreteam")
 const nombreacept = document.getElementById("aceptnameteam")
 const titulo = document.getElementById("tituloteam")
-let titulowhere= document.createElement("div")
+const divname= document.createElement("div")
 
 nombreacept.addEventListener("click", () =>{
-  titulowhere.innerHTML=`<h2 class="text-center">${nombreEquipo.value}</h2>`;
-  titulo.appendChild(titulowhere)
-  console.log(titulo)
+  divname.innerHTML=`<h4 class="text-center fw-bold">${nombreEquipo.value.toUpperCase()}</h4>`
+  titulo.appendChild(divname)
 } )
+
+
+
 
