@@ -34,7 +34,7 @@ const personajes = {
                 console.log(datos)
                 let divChamp = document.createElement("div")
                 divChamp.setAttribute.class="row";
-                divChamp.innerHTML=`<img class=" col-2 m-3" src="${datos.images.sm}"></img><p class="col-2">${datos.powerstats.intelligence}</p>`;
+                divChamp.innerHTML=`<img class=" col-3 m-1 w-10" src="${datos.images.sm}"></img><p class="col-3">${datos.powerstats.intelligence}</p>`;
                 divTeam.appendChild(divChamp)
               }
             }
