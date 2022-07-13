@@ -6,6 +6,23 @@
   padding: 0;
 }
 
+.filtro{
+  display: none;
+}
+
+.fondohero{
+  background-color: tan;
+  height:100vh;
+  overflow-y: scroll;
+}
+
+.infoteam{
+  background-color: lightgray;
+}
+  
+.contacinfo{
+  background-color: lightgray;
+}
 .darkmode{
   position: fixed;
   right:2%;
@@ -17,7 +34,11 @@
 
 img.img-thumbnail:hover{
   box-shadow: 0 0 25px;
-  color: rgb(156, 0, 143);
+  color: black
+}
+
+img.img-thumbnail:active{
+  filter:invert();
 }
 
 img.img-thumbnail {
@@ -25,7 +46,6 @@ img.img-thumbnail {
   height: 80%;
   border-radius: 10%;
   border:none;
-
 }
 ul li a {
   color: white;
@@ -39,7 +59,6 @@ ul li a:hover {
 }
 
 ul {
-  border-radius: 0 0 50px 50px;
   color: white;
   width: 100%;
 }
@@ -67,11 +86,20 @@ ul {
   color: white;
   border: 1px solid white;
   border-radius: 80px;
-  border-color: tan;;
+  border-color: tan;
 }
 
 .tablestadistics{
   width: 100%;
+  background-color: tan;
+}
+
+.fonditostats{
+  background-color: tan;
+}
+
+td{
+  background-color: lightgrey;
 }
 .fila{
   margin:200px;
@@ -109,7 +137,8 @@ ul {
 
 .myteam{
   border:1px solid black;
-  height: 32vh;
+  height: 93.7vh;
+  background-color: tan;
 }
 
 
@@ -146,4 +175,7 @@ ul {
 
 .card-title{
   height:10%;
+}
+.eleccion{
+  bottom: 50%;
 }

@@ -13,8 +13,8 @@ const personajes = {
           let espacio=" ";
           if (nombre.indexOf(" ") === -1){
             contentHTML += `
-            <div class="col-md-2 text-center">
-              <a onclick=datosChamp("${nombre}") target="_blank" class="nombrePerso">
+            <div class="personajesss col-md-2 text-center">
+              <a target="_blank" href="https://www.google.com/search?q=personaje+${heroe.name}" class="nombrePerso">
                 <img src="${heroe.images.lg}" alt="${heroe.name}" class="img-thumbnail">
               </a>
               <h3 class="title">${heroe.name}</h3>
@@ -23,8 +23,8 @@ const personajes = {
 
             nombre = nombre.replace(" ","-")
             contentHTML += `
-            <div class="col-md-2 text-center d-inline-block">
-              <a onclick=datosChamp("${nombre}") target="_blank" class="nombrePerso">
+            <div class="personajesss col-md-2 text-center">
+              <a target="_blank" href="https://www.google.com/search?q=personaje+${heroe.name}" class="nombrePerso">
                 <img src="${heroe.images.lg}" alt="${heroe.name}" class="img-thumbnail">
               </a>
               <h3 class="title">${heroe.name}</h3>
@@ -32,6 +32,26 @@ const personajes = {
           }
         }
         container.innerHTML = contentHTML;
+
+        const botonBuscar = document.getElementById("searchChamp");
+        let datosBuscar = document.getElementById("inputChamp");
+
+        datosBuscar.addEventListener("keyup", e =>{
+
+          if(e.key =="Escape")e
+
+
+
+          if (e.target.matches("#inputChamp")){
+            document.querySelectorAll(".personajesss").forEach( personaje =>{
+
+              personaje.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+                ?personaje.classList.remove("filtro")
+                :personaje.classList.add("filtro")
+            })
+          }
+        })
+
       });
       
   },
@@ -42,3 +62,4 @@ personajes.render();
 function datosChamp(a){
   alert(a)
 }
+

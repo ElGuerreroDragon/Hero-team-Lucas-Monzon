@@ -15,7 +15,33 @@ const personajes = {
               </div>
             </option>`;
         }
+
+        
         container.innerHTML = contentHTML;
+        const btnSelectChamp = document.getElementById("btnSelect")
+        const divTeam = document.getElementById("elteam")
+
+        btnSelectChamp.addEventListener("click", e =>{
+
+          console.log(divTeam.children.length)
+
+          if(divTeam.children.length > 2){
+            alert("no se pueden agregar mas de 3 tonto")
+          } else{
+
+            for(datos of json){
+              if(datos.name === container.value){
+                console.log(datos)
+                let divChamp = document.createElement("div")
+                divChamp.setAttribute.class="row";
+                divChamp.innerHTML=`<img class=" col-2 m-3" src="${datos.images.sm}"></img><p class="col-2">${datos.powerstats.intelligence}</p>`;
+                divTeam.appendChild(divChamp)
+              }
+            }
+          
+          
+        }
+        })
       }); 
   },
 };
