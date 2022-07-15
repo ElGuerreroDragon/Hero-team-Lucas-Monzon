@@ -22,19 +22,21 @@ const personajes = {
         const divTeam = document.getElementById("elteam")
 
         btnSelectChamp.addEventListener("click", e =>{
-
-          console.log(divTeam.children.length)
-
           if(divTeam.children.length > 2){
-            alert("no se pueden agregar mas de 3 tonto")
+            swal("Lo sentimos", "solo se pueden agregar hasta 3 heroes", "error");
           } else{
 
             for(datos of json){
               if(datos.name === container.value){
-                console.log(datos)
+                let heroesElegidos = []
+                let personaje = new Personajes (datos.name,datos.images.sm)
+                console.log(datos.name, datos.images.sm)
+                heroesElegidos.push(personaje)
+                console.log(heroesElegidos)
                 let divChamp = document.createElement("div")
                 divChamp.setAttribute.class="row";
-                divChamp.innerHTML=`<img class=" col-3 m-1 w-10" src="${datos.images.sm}"></img><p class="col-3">${datos.powerstats.intelligence}</p>`;
+                let html=`<div><img class=" col-2 m-0 w-10" src="${datos.images.sm}"></img><p class="col-3">${datos.powerstats.intelligence}</p></div>`
+                divChamp.innerHTML=html;
                 divTeam.appendChild(divChamp)
               }
             }
@@ -62,3 +64,9 @@ nombreacept.addEventListener("click", () =>{
 
 
 
+class Personajes{
+  constructor(nombre, imagen){
+    this.nombre=nombre;
+    this.imagen=imagen;
+  }
+}
