@@ -179,3 +179,21 @@ td{
 .eleccion{
   bottom: 50%;
 }
+
+.selectChampTeam{
+  margin:10px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px;
+}
+
+.selectChampTeam img{
+  border-radius: 20px;
+}
+
+.boton{
+  margin-top: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: transparent;
+  color:white;  
+}

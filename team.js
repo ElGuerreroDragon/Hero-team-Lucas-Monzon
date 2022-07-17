@@ -20,28 +20,27 @@ const personajes = {
         container.innerHTML = contentHTML;
         const btnSelectChamp = document.getElementById("btnSelect")
         const divTeam = document.getElementById("elteam")
+        let heroesElegidos = []
 
         btnSelectChamp.addEventListener("click", e =>{
           if(divTeam.children.length > 2){
             swal("Lo sentimos", "solo se pueden agregar hasta 3 heroes", "error");
           } else{
-
+            
             for(datos of json){
               if(datos.name === container.value){
-                let heroesElegidos = []
                 let personaje = new Personajes (datos.name,datos.images.sm)
                 console.log(datos.name, datos.images.sm)
                 heroesElegidos.push(personaje)
                 console.log(heroesElegidos)
+                localStorage.setItem("Elegidos", JSON.stringify(heroesElegidos))
                 let divChamp = document.createElement("div")
                 divChamp.setAttribute.class="row";
-                let html=`<div><img class=" col-2 m-0 w-10" src="${datos.images.sm}"></img><p class="col-3">${datos.powerstats.intelligence}</p></div>`
+                let html=`<div class="selectChampTeam" style="display:flex;"><img class="col-2 m-1 w-10" src="${datos.images.sm}"></img><p style="text-align:center;flex-grow:1" class="col-3"></br>NOMBRE: ${datos.name} </br></br> Inteligencia: ${datos.powerstats.intelligence}</br>Fuerza: ${datos.powerstats.strength} </br>Velocidad: ${datos.powerstats.speed} </br>Durabilidad: ${datos.powerstats.durability} </br>Poder: ${datos.powerstats.power} </br>Combate: ${datos.powerstats.combat}</p></div>`
                 divChamp.innerHTML=html;
                 divTeam.appendChild(divChamp)
               }
-            }
-          
-          
+            }          
         }
         })
       }); 

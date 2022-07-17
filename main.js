@@ -63,3 +63,18 @@ function datosChamp(a){
   alert(a)
 }
 
+const btnDark = document.getElementById("modedark")
+
+btnDark.addEventListener('click', () => {
+  console.log(btnDark.textContent)
+  if(btnDark.textContent == 'Modo oscuro')
+  {
+    alert('lo encontre en modo oscuro')
+    btnDark.textContent = 'Modo claro'
+    console.log(btnDark.textContent)
+  }else{
+  alert('lo encontre en modo claro')
+  btnDark.textContent = 'Modo oscuro'  
+  console.log(btnDark.textContent)
+}
+})
