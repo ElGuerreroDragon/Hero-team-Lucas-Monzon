@@ -63,18 +63,39 @@ function datosChamp(a){
   alert(a)
 }
 
+const container = document.getElementById("marvelsito");
+const containersito = document.getElementById("parteup");
 const btnDark = document.getElementById("modedark")
 
 btnDark.addEventListener('click', () => {
+
+  let oscuro = localStorage.getItem('darkmode')
+
+  if(oscuro === 'modo claro'){}
+
   console.log(btnDark.textContent)
   if(btnDark.textContent == 'Modo oscuro')
   {
-    alert('lo encontre en modo oscuro')
     btnDark.textContent = 'Modo claro'
+    btnDark.style.backgroundColor='white'
+    btnDark.style.color='black'
     console.log(btnDark.textContent)
+    container.style.backgroundColor='black';
+    container.style.color='white';
+    containersito.style.backgroundColor='black';
+    containersito.style.color='white';
+
   }else{
-  alert('lo encontre en modo claro')
-  btnDark.textContent = 'Modo oscuro'  
+  btnDark.textContent = 'Modo oscuro' 
+  btnDark.style.backgroundColor='black'
+  btnDark.style.color='white'
   console.log(btnDark.textContent)
+  container.style.backgroundColor='tan';
+  container.style.color='black';
+  containersito.style.backgroundColor='tan';
+  containersito.style.color='black';
 }
+
+localStorage.setItem('darkmode', btnDark.textContent)
+
 })
