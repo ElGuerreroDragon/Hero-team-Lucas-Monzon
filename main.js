@@ -69,9 +69,8 @@ const btnDark = document.getElementById("modedark")
 
 btnDark.addEventListener('click', () => {
 
-  let oscuro = localStorage.getItem('darkmode')
 
-  if(oscuro === 'modo claro'){}
+  let modo;
 
   console.log(btnDark.textContent)
   if(btnDark.textContent == 'Modo oscuro')
@@ -84,6 +83,7 @@ btnDark.addEventListener('click', () => {
     container.style.color='white';
     containersito.style.backgroundColor='black';
     containersito.style.color='white';
+    modo = 0
 
   }else{
   btnDark.textContent = 'Modo oscuro' 
@@ -94,8 +94,30 @@ btnDark.addEventListener('click', () => {
   container.style.color='black';
   containersito.style.backgroundColor='tan';
   containersito.style.color='black';
+  modo = 1
 }
 
-localStorage.setItem('darkmode', btnDark.textContent)
+
+localStorage.setItem('darkmode', modo)
 
 })
+
+let oscuro = localStorage.getItem('darkmode')
+
+if(oscuro === '0'){
+  btnDark.textContent = 'Modo claro'
+  btnDark.style.backgroundColor='white'
+  btnDark.style.color='black'
+  container.style.backgroundColor='black';
+  container.style.color='white';
+  containersito.style.backgroundColor='black';
+  containersito.style.color='white';
+}else{
+  btnDark.textContent = 'Modo oscuro' 
+  btnDark.style.backgroundColor='black'
+  btnDark.style.color='white'
+  container.style.backgroundColor='tan';
+  container.style.color='black';
+  containersito.style.backgroundColor='tan';
+  containersito.style.color='black';
+}

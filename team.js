@@ -69,3 +69,57 @@ class Personajes{
     this.imagen=imagen;
   }
 }
+
+
+const btnDark = document.getElementById("modedark")
+let teampage = document.getElementById('myteam')
+
+btnDark.addEventListener('click', () => {
+
+
+  let modo;
+
+  console.log(btnDark.textContent)
+  if(btnDark.textContent == 'Modo oscuro')
+  {
+    btnDark.textContent = 'Modo claro'
+    btnDark.style.backgroundColor='white'
+    btnDark.style.color='black'
+    console.log(btnDark.textContent)
+    teampage.style.backgroundColor='black';
+    teampage.style.color='white';
+    modo = 0
+
+  }else{
+  btnDark.textContent = 'Modo oscuro' 
+  btnDark.style.backgroundColor='black'
+  btnDark.style.color='white'
+  console.log(btnDark.textContent)
+  teampage.style.backgroundColor='tan';
+  teampage.style.color='black';
+  modo = 1
+}
+
+
+localStorage.setItem('darkmode', modo)
+
+})
+
+
+let oscuro = localStorage.getItem('darkmode')
+
+if(oscuro === '0'){
+  teampage.style.backgroundColor='black'
+  teampage.style.color='white'
+  btnDark.textContent = 'Modo claro'
+  btnDark.style.backgroundColor='white'
+  btnDark.style.color='black'
+  teampage.style.backgroundColor='black';
+  teampage.style.color='white';
+}else{
+  btnDark.textContent = 'Modo oscuro' 
+  btnDark.style.backgroundColor='black'
+  btnDark.style.color='white'
+  teampage.style.backgroundColor='tan';
+  teampage.style.color='black';
+}
